@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('slug');
-            $table->text('about')->nullable();
             $table->boolean('auto_approval')->default(true);
+            $table->text('about')->nullable();
             $table->foreignId('user_id')->constrained('users');
             $table->timestamp('deleted_at')->nullable();
             $table->foreignId('deleted_by')->nullable()->constrained('users');
