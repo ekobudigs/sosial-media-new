@@ -16,9 +16,7 @@ return new class extends Migration
             $table->foreignId('post_id')->constrained('posts');
             $table->string('name');
             $table->string('path');
-            $table->string('url');
             $table->string('mime');
-            $table->integer('size');
             $table->foreignId('created_by')->constrained('users');
             $table->timestamp('created_at')->nullable();
         });
