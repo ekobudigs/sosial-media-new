@@ -15,6 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('slug');
+            $table->string('cover_path', 1024)->nullable();
+            $table->string('thumbnail_path', 1024)->nullable();
             $table->boolean('auto_approval')->default(true);
             $table->text('about')->nullable();
             $table->foreignId('user_id')->constrained('users');
